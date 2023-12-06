@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Healthcare Chatbot Build using rasa</h1>
+    <div>
+      <div id="chatbox">
+        <p class="botText">
+          <span>Please try typing full sentences as I am still learning!</span>
+        </p>
+        <p class="botText">
+          <span>I am a your Health assistant.</span>
+        </p>
+        <p class="botText">
+          <span
+            >Hi There! how can i help you. What Symptoms you are facing</span
+          >
+          <p>Fever</p>
+        <p>Treating a fever:
+Most fevers will improve of their own accord in a few days. However, there are a number of things you can do to help the uncomfortable feelings associated with a fever.
+<br>i) Don't over dress. Wear loose comfortable clothing and make sure the room you are in isn't too warm. You shouldn't attempt to make yourself feel cold.</br>
+<br>ii) Drink more fluids, avoiding alcohol as this can make dehydration worse. You sweat more when you have a fever and drinking water makes sure you won't get dehydrated. You should be passing urine approximately every 6 hours. A pale yellow urine means you're unlikely to be dehydrated.</br>
+<br>iii) Take a medicine that reduces fever such as paracetamol (unless you're allergic or have been told by a healthcare professional that you can't take it).,/br></p>
+        </p>
+      </div>
+      <div id="userInput">
+        <input id="textInput" type="text" name="msg" placeholder="Message" />
+        <input id="buttonInput" type="submit" value="Send" />
+      </div>
+      <script>
+        function getBotResponse() {
+          var rawText = $("#textInput").val();
+          var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+          $("#textInput").val("");
+          $("#chatbox").append(userHtml);
+          document
+            .getElementById("userInput")
+            .scrollIntoView({ block: "start", behavior: "smooth" });
+          $.get("/get", { msg: rawText }).done(function (data) {
+            var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+            $("#chatbox").append(botHtml);
+            document
+              .getElementById("userInput")
+              .scrollIntoView({ block: "start", behavior: "smooth" });
+          });
+        }
+        $("#textInput").keypress(function (e) {
+          if (e.which == 13) {
+            getBotResponse();
+          }
+        });
+        $("#buttonInput").click(function () {
+          getBotResponse();
+        });
+      </script>
+    </div>
+  </body>
+</html>

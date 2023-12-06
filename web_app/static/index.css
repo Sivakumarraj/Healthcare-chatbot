@@ -1,0 +1,64 @@
+/* Red Panel */
+.red-panel {
+  min-height: 400px;
+  max-height: 400px;
+  background-color: #6b0000; /* Red background color */
+  color: white;
+  overflow: auto;
+}
+
+.red-panel .panel-info > .panel-heading {
+  color: white;
+  background-color: #8b0000; /* Darker red */
+  border-color: #8b0000;
+}
+
+.red-panel .panel-footer {
+  background-color: #8b0000; /* Darker red for footer */
+  border-top: 1px solid #8b0000;
+}
+
+/* Blue Panel */
+.blue-panel {
+  min-height: 400px;
+  max-height: 400px;
+  background-color: #003366; /* Blue background color */
+  color: white;
+  overflow: auto;
+}
+
+.blue-panel .panel-info > .panel-heading {
+  color: white;
+  background-color: #004080; /* Darker blue */
+  border-color: #004080;
+}
+
+.blue-panel .panel-footer {
+  background-color: #004080; /* Darker blue for footer */
+  border-top: 1px solid #004080;
+}
+
+/* Green Panel */
+.green-panel {
+  min-height: 400px;
+  max-height: 400px;
+  background-color: #006622; /* Green background color */
+  color: white;
+  overflow: auto;
+}
+
+.green-panel .panel-info > .panel-heading {
+  color: white;
+  background-color: #007f33; /* Darker green */
+  border-color: #007f33;
+}
+
+.green-panel .panel-footer {
+  background-color: #007f33; /* Darker green for footer */
+  border-top: 1px solid #007f33;
+}
+
+/* Your Background Image */
+body {
+  background-image: url('image.png');
+}
