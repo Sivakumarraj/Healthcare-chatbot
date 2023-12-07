@@ -12,7 +12,7 @@ accessibility to medical knowledge through medical chatbots
 Clone the project
 
 ```bash
-  git clone https://github.com/robinsingh051/Healthcare-chatbot
+  git clone https://github.com/Sivakumarraj/Healthcare-chatbot
 ```
 
 Go to the project directory
