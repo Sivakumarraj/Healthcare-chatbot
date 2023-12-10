@@ -62,11 +62,12 @@ open terminal in this directory and run the following command to start flask ser
 
 ## Team
 
-Siva Kumar Raju
-Niranjan Reddy
-Niranjan Kumar
-Nitin Katoch
-Amaresh K
+- [Siva Kumar Raju.P]
+- [Niranjan Reddy]
+- [Nitin Katoch]
+- [Niranjan Kumar]
+- [Amaresh.K]
+
 
 
 
